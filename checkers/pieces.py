@@ -35,6 +35,9 @@ class Piece:
         if self.king:
             win.blit(CROWN, (self.x - CROWN.get_width()//2, self.y - CROWN.get_height()//2))
     
+    def queen_piece(self):
+        self.king = True
+        
     def move(self, row, col):
         self.row = row
         self.col = col
